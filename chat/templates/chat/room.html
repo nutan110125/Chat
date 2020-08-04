@@ -11,7 +11,8 @@
     {{ sender|json_script:"sender" }}
     {{ receiver|json_script:"receiver" }}
     <script>
-        const roomName = JSON.parse(document.getElementById('room-name').textContent);
+        const sender = JSON.parse(document.getElementById('sender').textContent);
+        const receiver = JSON.parse(document.getElementById('receiver').textContent);
 
         const chatSocket = new WebSocket(
             'ws://'
