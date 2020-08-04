@@ -5,7 +5,7 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 from .consumers import *
 
 websocket_urlpatterns = [
-    re_path(r'ws/chat/(?P<room_name>\w+)/$', ChatConsumer),
+    re_path(r'ws/chat/(?P<sender>[0-9]+)/(?P<receiver>[0-9]+)$', ChatConsumer),
 ]
 
 
